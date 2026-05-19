@@ -1771,3 +1771,84 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
     .desktop-menu { display: none; }
     .hamburger { display: block; }
 }
+
+/* --- UNIVERSAL MOBILE FIXES (600px and below) --- */
+@media (max-width: 600px) {
+    /* 1. Fix Landing Page (Overlay) */
+    .overlay-content .couple-names {
+        font-size: 3.2rem; /* Shrunk from 5.5rem */
+        margin: 20px 0;
+    }
+    .overlay-content .subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+    }
+    .invitation-stack {
+        padding: 10px 30px;
+    }
+
+    /* 2. Fix Navigation Bar */
+    .nav-wrapper {
+        padding: 0 15px; /* Stop logo/menu from touching edges */
+    }
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+
+    /* 3. Fix Section Titles & Spacing */
+    .section {
+        padding: 60px 0; /* Less padding on mobile */
+    }
+    .section-title {
+        font-size: 2.5rem; /* Stop titles from being massive */
+    }
+
+    /* 4. Fix Attire Section (The circles) */
+    .attire-mood-board {
+        padding: 30px 15px;
+        width: 95%;
+    }
+    .swatch-container {
+        flex-wrap: nowrap; /* Keep them in one row */
+    }
+    .swatch-circle {
+        width: 45px; /* Shrunk for mobile */
+        height: 45px;
+        margin: 0 -5px; /* Tighter overlap */
+        border-width: 2px;
+    }
+
+    /* 5. Fix Hero Section */
+    .hero-motto {
+        font-size: 2.8rem;
+    }
+    .hero-motto span {
+        font-size: 1.1rem;
+    }
+    .countdown-modern {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+        letter-spacing: 2px;
+    }
+
+    /* 6. Fix Floating Controls (Stacking) */
+    #back-to-top {
+        bottom: 95px; /* Position above music button */
+        right: 15px;
+    }
+    #music-control {
+        bottom: 25px;
+        right: 15px;
+    }
+    
+    /* 7. Fix Entourage (Names Clumping) */
+    .hall-title { font-size: 2.5rem; }
+    .hall-grid { gap: 15px; }
+    .hall-column p { font-size: 0.9rem; line-height: 1.8; }
+    
+    /* 8. Fix Details (Venue Cards) */
+    .details-card {
+        min-width: 100%;
+        padding: 40px 20px;
+    }
+}
