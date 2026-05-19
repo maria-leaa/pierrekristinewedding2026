@@ -51,15 +51,18 @@ openBtn.addEventListener('click', function() {
 
 // --- 3. Hamburger Menu Logic ---
 if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
+    menuToggle.addEventListener('click', function() {
+        // Toggle 'active' on the button (for the X animation)
+        this.classList.toggle('active');
+        
+        // Toggle 'active' on the overlay (to slide it in and show links)
         mobileOverlay.classList.toggle('active');
         
-        // Prevent background scrolling when menu is open
+        // Prevent background scrolling
         if (mobileOverlay.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
     });
 }
@@ -69,7 +72,7 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
         mobileOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
     });
 });
 

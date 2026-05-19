@@ -156,11 +156,16 @@ h1, h2, h3, h4 {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2000;
-    background: transparent; /* Transparent on hero */
+    z-index: 9999 !important; 
+    background: transparent; 
     padding: 15px 0;
-    transition: all 0.4s ease; /* Smooth transition for color and bg */
+    transition: all 0.4s ease; 
 }
+
+/* #main-nav {
+
+    z-index: 9999 !important; 
+} */
 
 #main-nav.hidden {
     opacity: 0;
@@ -1680,54 +1685,69 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 
 /* --- Hamburger Button --- */
 .hamburger {
-    display: none; 
-    background: none;
+    display: none; /* Hidden on desktop */
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    
-    position: relative; /* Ensure it stays in layout */
-    z-index: 9999 !important;
+    padding: 15px;
+    /* This ensures the button stays ON TOP of the white menu */
+    z-index: 10000 !important; 
+    position: relative;
 }
+
+/* .hamburger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: white; 
+    margin: 6px 0;
+    transition: all 0.3s ease;
+} */
 
 .hamburger span {
     display: block;
     width: 28px;
     height: 2px;
-    background-color: white; /* Default white for hero */
+    background-color: white; 
     margin: 6px 0;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5)); 
 }
+
 
 .hamburger.active span {
     background-color: var(--burgundy) !important;
+    filter: none; /* Remove shadow when on solid white background */
 }
 
 /* Hamburger color when scrolled */
 #main-nav.scrolled .hamburger span {
     background-color: var(--burgundy);
+    filter: none; 
 }
+
 
 /* --- Mobile Menu Overlay --- */
 #mobile-menu-overlay {
     position: fixed;
     top: 0;
-    right: -100%; 
+    left: 0;
     width: 100%;
     height: 100vh;
     background: rgba(255, 255, 255, 0.98); 
-    backdrop-filter: blur(10px);
-    z-index: 2500; /* Lower than hamburger */
+    /* This must be LOWER than the hamburger button */
+    z-index: 9500; 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    visibility: hidden; /* Hide from screen readers when closed */
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(100%);
+    visibility: hidden;
 }
 
 #mobile-menu-overlay.active {
-    right: 0;
-    visibility: visible;
+    transform: translateX(0);
+    visibility: visible !important; /* FIX: Must turn back to visible */
 }
 
 .mobile-menu-content {
@@ -1749,8 +1769,8 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 }
 
 #mobile-menu-overlay.active .mobile-menu-content a {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Staggered animation for links */
@@ -1770,13 +1790,17 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 @media (max-width: 850px) {
     .desktop-menu { display: none; }
     .hamburger { display: block; }
+
+    .nav-wrapper {
+        overflow: visible !important;
+    }
 }
 
 /* --- UNIVERSAL MOBILE FIXES (600px and below) --- */
 @media (max-width: 600px) {
     /* 1. Fix Landing Page (Overlay) */
     .overlay-content .couple-names {
-        font-size: 3.2rem; /* Shrunk from 5.5rem */
+        font-size: 3.2rem; 
         margin: 20px 0;
     }
     .overlay-content .subtitle {
@@ -1789,7 +1813,7 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 
     /* 2. Fix Navigation Bar */
     .nav-wrapper {
-        padding: 0 15px; /* Stop logo/menu from touching edges */
+        padding: 0 15px; 
     }
     .nav-logo {
         font-size: 1.1rem;
@@ -1797,28 +1821,54 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 
     /* 3. Fix Section Titles & Spacing */
     .section {
-        padding: 60px 0; /* Less padding on mobile */
+        padding: 60px 0; 
     }
     .section-title {
-        font-size: 2.5rem; /* Stop titles from being massive */
+        font-size: 2.2rem !important; /* Shrunk to fit screen */
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important; /* Ensures "Attire Guide" is never hidden */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
     }
 
-    /* 4. Fix Attire Section (The circles) */
+    /* 4. Fix Attire Section */
     .attire-mood-board {
         padding: 30px 15px;
         width: 95%;
+        margin-top: 10px;
+        overflow: visible; /* Prevents title clipping */
     }
     .swatch-container {
-        flex-wrap: nowrap; /* Keep them in one row */
+        flex-wrap: nowrap; 
+        justify-content: center;
     }
     .swatch-circle {
-        width: 45px; /* Shrunk for mobile */
+        width: 45px; 
         height: 45px;
-        margin: 0 -5px; /* Tighter overlap */
+        margin: 0 -5px; 
         border-width: 2px;
+        border-radius: 50% !important; /* Forces circle shape */
+    }
+    .attire-intro {
+        font-size: 0.85rem;
+        padding: 0 10px;
     }
 
-    /* 5. Fix Hero Section */
+    /* 5. Fix Gallery (Centering) */
+    .square-gallery-grid {
+        grid-template-columns: 1fr; /* Stack images vertically */
+        justify-items: center;      /* Centers images horizontally */
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .gallery-card {
+        width: 100%;
+        max-width: 280px; /* Prevents images from being too large on tall phones */
+    }
+
+    /* 6. Fix Hero Section */
     .hero-motto {
         font-size: 2.8rem;
     }
@@ -1831,22 +1881,38 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
         letter-spacing: 2px;
     }
 
-    /* 6. Fix Floating Controls (Stacking) */
+    /* 7. Fix Floating Controls (Stacking & Alignment) */
     #back-to-top {
-        bottom: 95px; /* Position above music button */
+        bottom: 90px; /* Positioned directly above music */
         right: 15px;
+    }
+    #back-to-top button {
+        width: 50px;
+        height: 50px;
+    }
+    /* Recenter the progress ring for mobile */
+    .progress-ring {
+        width: 50px;
+        height: 50px;
+    }
+    .progress-ring circle {
+        cx: 25; 
+        cy: 25; 
+        r: 22; /* Slightly smaller radius for the mobile button */
     }
     #music-control {
         bottom: 25px;
         right: 15px;
     }
     
-    /* 7. Fix Entourage (Names Clumping) */
-    .hall-title { font-size: 2.5rem; }
-    .hall-grid { gap: 15px; }
-    .hall-column p { font-size: 0.9rem; line-height: 1.8; }
+    /* 8. Fix Entourage (Names Clumping) */
+    .hall-title { font-size: 2.2rem; }
+    .hall-grid { gap: 10px; grid-template-columns: 1fr; }
+    .hall-column p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 5px; }
+    .portrait-grid { gap: 30px; }
+    .portrait-box { padding: 25px 15px; }
     
-    /* 8. Fix Details (Venue Cards) */
+    /* 9. Fix Details (Venue Cards) */
     .details-card {
         min-width: 100%;
         padding: 40px 20px;
