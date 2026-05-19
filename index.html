@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=1">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❦</text></svg>">
+    <title>Pierre & Kristine | Wedding Invitation</title>
+    <meta name="title" content="Pierre & Kristine | Wedding Invitation">
+    <meta name="description"
+        content="Join us as we celebrate our love and begin our greatest adventure on July 03, 2026.">
+
+    <!-- Open Graph / Facebook / Messenger / TikTok -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-invitation-link.com/"> <!-- REPLACE WITH YOUR ACTUAL LINK -->
+    <meta property="og:title" content="Pierre & Kristine | Wedding Invitation">
+    <meta property="og:description"
+        content="Join us as we celebrate our love on July 03, 2026. Our Greatest Adventure Begins.">
+    <meta property="og:image" content="thumbnail.jpg">
+
+    <!-- Twitter Preview (Also used by some other apps) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-invitation-link.com/">
+    <meta property="twitter:title" content="Pierre & Kristine | Wedding Invitation">
+    <meta property="twitter:description" content="Join us as we celebrate our love on July 03, 2026.">
+    <meta property="twitter:image" content="thumbnail.jpg">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="wedding-music" loop>
+        <!-- Replace the URL below with your actual music file link (MP3) -->
+        <source
+            src="https://res.cloudinary.com/dqtl8miee/video/upload/v1779009271/Violin_Piano_Duo_-_I_Love_You_Always_Forever_-_Donna_Lewis_zwcr1g.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Control -->
+    <div id="music-control" class="hidden">
+        <button id="mute-btn" aria-label="Toggle Music">
+            <!-- SVG Speaker Icon -->
+            <svg id="music-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path id="music-waves" d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <line id="music-slash" x1="23" y1="1" x2="1" y2="23" style="display:none;"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 1. Invitation Landing Overlay -->
+    <div id="invitation-overlay">
+        <div class="overlay-content">
+            <!-- Enhanced Subtitle -->
+            <p class="subtitle">TOGETHER WITH OUR FAMILIES, WE JOYFULLY INVITE YOU TO CELEBRATE OUR LOVE</p>
+
+            <h1 class="couple-names">Pierre <span>&</span> Kristine</h1>
+
+            <!-- Boxed Date -->
+            <div class="invitation-stack">
+                <div class="date-row">JULY 03, 2026</div>
+            </div>
+
+            <!-- Button outside the box -->
+            <div class="button-row">
+                <button id="open-invitation-btn">Open Invitation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav" class="hidden">
+        <div class="nav-wrapper container">
+            <!-- The Monogram (Visible on desktop/mobile) -->
+            <div class="nav-logo">P & K</div>
+
+            <!-- Desktop Links -->
+            <div class="nav-container desktop-menu">
+                <a href="#invitation-text">Our Story</a>
+                <a href="#details">Venue</a>
+                <a href="#entourage">Entourage</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#attire">Attire</a>
+                <a href="#rsvp">RSVP</a>
+            </div>
+
+            <!-- Hamburger Toggle (Mobile Only) -->
+            <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <a href="#invitation-text">Our Story</a>
+            <a href="#details">Venue</a>
+            <a href="#entourage">Entourage</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#attire">Attire</a>
+            <a href="#rsvp">RSVP</a>
+        </div>
+    </div>
+
+
+    <!-- 2. Re-Enhanced Hero Section -->
+    <header class="hero main-hero">
+        <!-- Background Image with Ken Burns Effect -->
+        <div class="hero-image-bg"></div>
+
+        <!-- Deep Burgundy Tinted Gradient -->
+        <div class="hero-overlay-gradient"></div>
+
+        <div class="hero-content">
+            <!-- Decorative Monogram -->
+            <div class="hero-monogram reveal-item">P & K</div>
+
+            <p class="hero-date-top reveal-item">JULY 03, 2026</p>
+
+            <h2 class="hero-motto reveal-item">
+                Our Greatest <br>
+                <span>Adventure Begins</span>
+            </h2>
+
+            <div class="countdown-wrapper reveal-item">
+                <div id="countdown" class="countdown-modern"></div>
+            </div>
+        </div>
+
+        <!-- Animated Scroll Indicator -->
+        <div class="hero-scroll-badge reveal-item">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to Reveal</p>
+        </div>
+    </header>
+
+    <!-- Invitation Text -->
+    <section class="section invitation-text" id="invitation-text">
+        <div class="container reveal">
+            <!-- Decorative Top Element -->
+            <div class="floral-divider">
+                <img src="https://cdn-icons-png.flaticon.com/512/2913/2913520.png" class="floral-icon" alt="floral">
+            </div>
+
+            <div class="invitation-content">
+                <p class="verse">
+                    "Two are better than one... for if they fall, <br>
+                    one will lift up his companion."
+                </p>
+
+                <div class="formal-invite">
+                    <p class="request">WITH JOYFUL HEARTS, WE INVITE YOU TO WITNESS THE UNION OF</p>
+                    <h2 class="script-names">Pierre & Kristine</h2>
+                    <p class="request">AS WE EXCHANGE VOWS AND BEGIN OUR LIVES TOGETHER</p>
+                </div>
+
+                <div class="date-display">
+                    <div class="line"></div>
+                    <div class="date-details">
+                        <span class="day">FRIDAY</span>
+                        <span class="full-date">JULY 03, 2026</span>
+                        <span class="time">AT HALF PAST TWO IN THE AFTERNOON</span>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section details" id="details">
+        <div class="container">
+            <h2 class="section-title">The Celebration</h2>
+            <p class="details-intro">We can't wait to share these moments with you.</p>
+
+            <div class="details-grid">
+                <!-- Ceremony Card -->
+                <div class="details-card reveal">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Towers -->
+                            <path d="M5 22V9l3-3v16M16 22V9l3-3v16"></path>
+                            <!-- Main Roof -->
+                            <path d="M8 12l4-4 4 4v10H8V12z"></path>
+                            <!-- The Arched Doorway -->
+                            <path d="M10 22v-4a2 2 0 0 1 4 0v4"></path>
+                            <!-- The Cross -->
+                            <path d="M12 3v5M10 5.5h4"></path>
+                        </svg>
+                    </div>
+                    <span class="event-time">2:30 PM</span>
+                    <h3>The Ceremony</h3>
+                    <div class="venue-info">
+                        <p class="venue-name">San Agustin Church</p>
+                        <p class="venue-address">General Luna St, Intramuros,<br>Manila, Philippines</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/SanAgustinChurch" target="_blank" class="map-link">
+                        <span>View on Maps</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="details-divider"></div>
+
+                <!-- Reception Card -->
+                <div class="details-card reveal">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Base line -->
+                            <path d="M2 22h20"></path>
+                            <!-- Grand Structure -->
+                            <path d="M4 22V10l4-4 4-2 4 2 4 4v12"></path>
+                            <!-- Main Ballroom Entrance -->
+                            <path d="M9 22v-5a3 3 0 0 1 6 0v5"></path>
+                            <!-- Window Details -->
+                            <path d="M7 13h2M15 13h2M7 17h2M15 17h2"></path>
+                        </svg>
+                    </div>
+                    <span class="event-time">6:00 PM</span>
+                    <h3>The Reception</h3>
+                    <div class="venue-info">
+                        <p class="venue-name">The Manila Hotel</p>
+                        <p class="venue-address">Centennial Hall, One Rizal Park,<br>Manila, Philippines</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/ManilaHotel" target="_blank" class="map-link">
+                        <span>View on Maps</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Entourage Section -->
+    <section class="section entourage-enchanted" id="entourage">
+        <div class="container">
+            <!-- Header -->
+            <div class="entourage-header reveal">
+                <h2 class="section-title">The Wedding Party</h2>
+                <p class="entourage-subtitle">Those who walk beside us as we begin our journey</p>
+                <div class="floral-divider">❦</div>
+            </div>
+
+            <!-- 1. Parents Section -->
+            <div class="entourage-row parents reveal">
+                <div class="entourage-card">
+                    <span class="role-tag">Bride's Pillars</span>
+                    <p class="name">Mr. Ernesto Go Raymundo Jr.</p>
+                    <p class="name">Mrs. Elizabeth Raymundo</p>
+                </div>
+                <div class="entourage-card">
+                    <span class="role-tag">Groom's Pillars</span>
+                    <p class="name">Mr. Narciso De Borja Jr. <small>(†)</small></p>
+                    <p class="name">Mrs. Yolanda De Borja</p>
+                </div>
+            </div>
+
+            <!-- 2. Principal Sponsors -->
+            <div class="entourage-block sponsors-block reveal">
+                <div class="enchanted-frame">
+                    <h3 class="group-title">Principal Sponsors</h3>
+                    <p class="tagline">To stand as witnesses to our sacred vows</p>
+                    <div class="sponsor-grid">
+                        <div class="sponsor-col">
+                            <p>Dr. Rizalino Dela Fuente Jr.</p>
+                            <p>Hon. Carlo Santos</p>
+                            <p>Judge Bernard Bernal</p>
+                            <p>Hon. Ricardo Cruz Jr.</p>
+                            <p>Mr. Eliseo Go</p>
+                            <p>Mr. Marites Go</p>
+                            <p>Mr. Ericson Go Raymundo</p>
+                            <p>Mr. Juanito Go Jr.</p>
+                            <p>Mr. Denierick Rimando</p>
+                            <p>Mr. Ace Calderon</p>
+                            <p>Mr. Fidel Balidio</p>
+                            <p>Engr. Jaymar Caya</p>
+                        </div>
+                        <div class="sponsor-col">
+                            <p>Mrs. Susan Co Dela Fuente</p>
+                            <p>Ms. Anna Lira Reyes</p>
+                            <p>Ms. Wendy Paredes</p>
+                            <p>Ms. Cristeta Flores</p>
+                            <p>Ms. Nenette Taña</p>
+                            <p>Ms. Carmencita Tuazon</p>
+                            <p>Mrs. Meliza Raymundo</p>
+                            <p>Ms. Catlyn Palamara</p>
+                            <p>Ms. Sherry Anne Moreno</p>
+                            <p>Mrs. Marites Calderon</p>
+                            <p>Mrs. Leticia Balidio</p>
+                            <p>Mrs. Sulieta Caya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Honor Roles -->
+            <div class="entourage-row honor-roles reveal">
+                <div class="entourage-card">
+                    <span class="role-tag">Best Men</span>
+                    <p class="name">Mr. Christian Bukalan</p>
+                    <p class="name">Mr. Janrhee Absing</p>
+                </div>
+                <div class="entourage-card">
+                    <span class="role-tag">Siblings of Honor</span>
+                    <p class="name">Ms. Kimberly Anne Raymundo-Cruz</p>
+                    <p class="name">Mr. Karl Ernest Raymundo</p>
+                </div>
+            </div>
+
+            <!-- 4. Secondary Sponsors (Enchanted Symbols) -->
+            <div class="secondary-symbols reveal">
+                <h3 class="group-title">The Symbols of Unity</h3>
+                <div class="symbol-grid">
+
+                    <!-- Candle -->
+                    <div class="symbol-item">
+                        <div class="symbol-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 9v12M12 3c1.1 0 2 1.8 2 3s-.9 3-2 3-2-1.8-2-3 .9-3 2-3z" />
+                            </svg>
+                        </div>
+                        <span class="symbol-name">THE CANDLE</span>
+                        <p class="tagline">To light our path</p>
+                        <p class="name">Mr. Xyrus Peralta</p>
+                        <p class="name">Mrs. Princess Paulette Peralta</p>
+                    </div>
+
+                    <!-- Veil -->
+                    <div class="symbol-item">
+                        <div class="symbol-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 3s-2 2-2 5 2 8 9 8 9-5 9-8-2-5-2-5M12 16v5" />
+                                <circle cx="12" cy="16" r="1" />
+                            </svg>
+                        </div>
+                        <span class="symbol-name">THE VEIL</span>
+                        <p class="tagline">To clothe us as one</p>
+                        <p class="name">Mr. Jorman Huevos</p>
+                        <p class="name">Atty. Patricia Pamela Huevos</p>
+                    </div>
+
+                    <!-- Cord -->
+                    <div class="symbol-item">
+                        <div class="symbol-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M7 12c-3 0-4-3-4-4s1-4 4-4 4 3 4 4c0 4 4 8 9 8s4-3 4-4-1-4-4-4-4 3-4 4c0 4-4 8-9 8" />
+                            </svg>
+                        </div>
+                        <span class="symbol-name">THE CORD</span>
+                        <p class="tagline">To bind us in unity</p>
+                        <p class="name">Mr. Rolando Dionisio II</p>
+                        <p class="name">Mrs. Maureen Dionisio</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 5. Wedding Party -->
+            <div class="party-container reveal">
+                <div class="party-split">
+                    <div class="party-col">
+                        <h3 class="party-title">The Groomsmen</h3>
+                        <div class="names-list">
+                            <p>Joseph Creencia</p>
+                            <p>Dr. Ruben Carlo Reyes</p>
+                            <p>Robipher De Leon</p>
+                            <p>John Earl De Borja</p>
+                            <p>Hon. Emmanuel Taña</p>
+                            <p>Christian Neri Ortiz</p>
+                            <p>Gerald Cometa</p>
+                            <p>Ron Cansino</p>
+                            <p>Arnel Ambrosio</p>
+                            <p>Jonard Tan</p>
+                        </div>
+                    </div>
+                    <div class="party-col">
+                        <h3 class="party-title">The Bridesmaids</h3>
+                        <div class="names-list">
+                            <p>Elissa Jane Miraflor</p>
+                            <p>Maria Teresa De Los Santos</p>
+                            <p>Stephanie Torilla</p>
+                            <p>Marjorie Ann Raymundo</p>
+                            <p>Czarina Marie Tauro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Bearers & Flower Squad -->
+            <div class="kids-section reveal">
+                <div class="kids-grid">
+                    <div class="kid-card">
+                        <span class="role-tag">Ring Bearer</span>
+                        <p class="name">Xylas Pablo Peralta</p>
+                    </div>
+                    <div class="kid-card">
+                        <span class="role-tag">Coin Bearer</span>
+                        <p class="name">Sebastian Kai De Borja</p>
+                    </div>
+                    <div class="kid-card">
+                        <span class="role-tag">Bible Bearer</span>
+                        <p class="name">Zacharias Braeden Bukalan</p>
+                    </div>
+                </div>
+                <div class="flower-squad-box">
+                    <span class="role-tag">Flower Squad</span>
+                    <p class="name">Ms. Erica Justine • Ms. Kaiana Shane • Ms. Nina Marienela</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Captured Moments</h2>
+            <p class="gallery-subtitle">A glimpse into our journey</p>
+
+            <div class="square-gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="1.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="2.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="3.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="4.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Image 5 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="5.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Image 6 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="6.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                
+                <!-- Image 8 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="8.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="7.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="gallery-card reveal">
+                    <div class="image-inner">
+                        <img src="hero.JPG" alt="Moments">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attire Section -->
+    <section class="section attire" id="attire">
+        <div class="container reveal">
+            <h2 class="section-title">Attire Guide</h2>
+            <div class="attire-container">
+                <div class="attire-main-info">
+                    <p class="attire-label">STRICTLY FORMAL</p>
+                    <div class="attire-guests">
+                        <p><strong>GENTLEMEN:</strong> BLACK SUIT AND TIE</p>
+                        <p><strong>LADIES:</strong> LONG DRESS OR GOWN</p>
+                    </div>
+
+                    <p class="attire-request">WE REQUEST THAT EVERYONE DRESS ACCORDING TO OUR COLOR PALETTE.</p>
+
+                    <div class="palette-grid">
+                        <div class="swatch c1"><span class="swatch-label">Burgundy</span></div>
+                        <div class="swatch c2"></div>
+                        <div class="swatch c3"></div>
+                        <div class="swatch c4"></div>
+                        <div class="swatch c5"><span class="swatch-label">Blush</span></div>
+                    </div>
+
+                    <div class="sponsor-attire">
+                        <p class="sponsor-header">FOR PRINCIPAL SPONSORS:</p>
+                        <p><strong>GENTLEMEN:</strong> BLACK SUIT AND TIE</p>
+                        <p><strong>LADIES:</strong> LONG DRESS OR GOWN IN <strong>BURGUNDY</strong></p>
+                    </div>
+
+                    <p class="attire-restriction">KINDLY REFRAIN FROM WEARING WHITE, CHAMPAGNE, NUDE OR BEIGE ATTIRE.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section enchanted-rsvp" id="rsvp">
+        <div class="container">
+
+            <!-- The Floating Enchanted Card -->
+            <div class="enchanted-card reveal">
+
+                <!-- Corner Decorations -->
+                <div class="corner-leaf top-left"></div>
+                <div class="corner-leaf bottom-right"></div>
+
+                <!-- Gifts Section -->
+                <div class="enchanted-section gift-area">
+                    <!-- Digital Wax Seal -->
+                    <div class="wax-seal">
+                        <span>P&K</span>
+                    </div>
+
+                    <h2 class="enchanted-title">Wishing Well</h2>
+                    <div class="enchanted-body">
+                        <p>With all that we have, we are truly blessed.</p>
+                        <p>Your presence and prayers are all that we request.</p>
+                        <p class="script-quote">"However, if you wish to give nonetheless,<br>a monetary gift would be
+                            greatly appreciated."</p>
+                    </div>
+                </div>
+
+                <!-- Elegant Divider -->
+                <div class="magic-divider">
+                    <div class="line"></div>
+                    <div class="sparkle">✦</div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- RSVP Section -->
+                <div class="enchanted-section rsvp-area">
+                    <h2 class="enchanted-title">The RSVP</h2>
+                    <p class="rsvp-sub">WE WOULD BE DELIGHTED TO HAVE YOUR RESPONSE BY</p>
+                    <div class="rsvp-date-frame">
+                        <h3>JUNE 02, 2026</h3>
+                    </div>
+
+                    <div class="enchanted-contacts">
+                        <div class="contact-item">
+                            <span class="role">KRISTINE</span>
+                            <a href="tel:09171030838" class="val">0917 103 0838</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="role">PIERRE</span>
+                            <a href="tel:09178321608" class="val">0917 832 1608</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="enchanted-footer">
+        <div class="container">
+            <!-- Final Monogram -->
+            <div class="footer-monogram">P & K</div>
+
+            <!-- Main Footer Text -->
+            <div class="footer-content">
+                <h3 class="footer-names">Pierre <span>&</span> Kristine</h3>
+                <p class="footer-date">07 . 03 . 2026</p>
+            </div>
+
+            <!-- Optional Wedding Hashtag -->
+            <div class="footer-hashtag">
+                <p>#PierreFoundHisKristine</p>
+            </div>
+
+            <div class="footer-credit">
+                <p>Made with love for our family & friends</p>
+                <p>&copy; 2026 Pierre & Kristine Wedding</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Ornament -->
+    <div id="back-to-top" class="hidden">
+        <button aria-label="Back to Top">
+            <!-- The Progress Ring -->
+            <svg class="progress-ring" width="54" height="54">
+                <circle class="progress-ring__circle-bg" stroke="rgba(88, 16, 33, 0.1)" stroke-width="2"
+                    fill="transparent" r="24" cx="27" cy="27" />
+                <circle id="scroll-progress" class="progress-ring__circle" stroke="#581021" stroke-width="2"
+                    fill="transparent" r="24" cx="27" cy="27" />
+            </svg>
+            <!-- The Arrow (Inside the ring) -->
+            <div class="arrow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
