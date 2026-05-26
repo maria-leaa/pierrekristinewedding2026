@@ -1660,32 +1660,54 @@ body.opened .hero-scroll-badge { transition-delay: 1.2s; }
 } */
 
 /* --- Fireflies Movement --- */
+/* --- Continuous Rising Fireflies --- */
+#fireflies-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; 
+    z-index: 9998; /* Under the Nav, but above all page content */
+    overflow: hidden;
+}
+
 .firefly {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: #ffdb8b; 
+    background: #FFD700;
     border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.8);
     opacity: 0;
-    box-shadow: 0 0 10px 2px rgba(255, 219, 139, 0.8);
-    /* We use 'rise' for vertical and 'twinkle' for the flickering effect */
-    animation: rise linear infinite, twinkle 3s ease-in-out infinite;
-    pointer-events: none;
+    will-change: transform, opacity;
 }
 
-@keyframes rise {
-    0% { 
-        transform: translateY(100vh) translateX(0); 
-        opacity: 0; 
+@keyframes riseUp {
+    0% {
+        transform: translateY(105vh) translateX(0);
+        opacity: 0;
     }
-    10% { opacity: 0.8; }
-    90% { opacity: 0.8; }
-    100% { 
-        transform: translateY(-10vh) translateX(30px); 
-        opacity: 0; 
+    10% {
+        opacity: 1;
+    }
+    50% {
+        /* Adds a little horizontal drift mid-way */
+        transform: translateY(50vh) translateX(20px);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(-20px);
+        opacity: 0;
     }
 }
 
+@keyframes firefly-twinkle {
+    0%, 100% { transform: scale(0.4); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
 @keyframes twinkle {
     0%, 100% { transform: scale(0.5); }
     50% { transform: scale(1.2); }

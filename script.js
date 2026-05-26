@@ -222,41 +222,46 @@ const handleScroll = () => {
 
 // --- 7. Fireflies Initialization (Rising from Bottom) ---
 function initFireflies() {
+    // Prevent duplicates
+    if (document.getElementById('fireflies-container')) return;
+
     const container = document.createElement('div');
     container.id = 'fireflies-container';
-    // Ensure container is fixed to fill the screen
-    container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    container.style.zIndex = '1'; // Behind text but above background
-    mainBody.appendChild(container);
+    document.body.appendChild(container);
 
-    const fireflyCount = 25; 
+    const fireflyCount = 40; // Total number of fireflies
 
     for (let i = 0; i < fireflyCount; i++) {
         const firefly = document.createElement('div');
         firefly.className = 'firefly';
         
-        // Random horizontal position
-        const posX = Math.random() * 100;
-        firefly.style.left = posX + '%';
+        // Random horizontal position (0% to 100%)
+        firefly.style.left = Math.random() * 100 + 'vw';
         
-        // Random vertical speed (between 10 and 25 seconds)
-        const duration = 10 + Math.random() * 15; 
+        // Random travel speed (12s to 25s for a slow, graceful rise)
+        const duration = 12 + Math.random() * 13;
         
-        // Random start delay so they don't all rise at once
+        // Random start delay (up to 20s) so they don't all start at once
         const delay = Math.random() * 20;
+
+        // Apply animations
+        // 1. riseUp: handles the bottom-to-top movement
+        // 2. firefly-twinkle: handles the flickering light effect
+        firefly.style.animation = `
+            riseUp ${duration}s linear infinite, 
+            firefly-twinkle ${2 + Math.random() * 2}s ease-in-out infinite
+        `;
         
-        firefly.style.animationDuration = `${duration}s, 3s`;
         firefly.style.animationDelay = `${delay}s`;
-        
+
+        // Randomize size slightly
+        const size = 2 + Math.random() * 3;
+        firefly.style.width = size + 'px';
+        firefly.style.height = size + 'px';
+
         container.appendChild(firefly);
     }
 }
-
 // --- 8. Event Listeners ---
 window.addEventListener("scroll", handleScroll);
 
