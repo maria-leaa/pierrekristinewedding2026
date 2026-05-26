@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=2.3">
+    <link rel="stylesheet" href="style.css?v=2.4">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
@@ -19,12 +19,13 @@
 
     <!-- Open Graph / Facebook / Messenger / TikTok -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pierrekristinewedding2026.vercel.app/"> <!-- REPLACE WITH YOUR ACTUAL LINK -->
+    <meta property="og:url" content="https://pierrekristinewedding2026.vercel.app/">
+    <!-- REPLACE WITH YOUR ACTUAL LINK -->
     <meta property="og:title" content="Pierre & Kristine | Wedding Invitation">
     <meta property="og:description"
         content="Join us as we celebrate our love on July 03, 2026. Our Greatest Adventure Begins.">
     <meta property="og:image"
-        content="https://res.cloudinary.com/dqtl8miee/image/upload/v1779197323/thumbnail_yae9yw.png">
+        content="https://res.cloudinary.com/dqtl8miee/image/upload/v1779793087/thumbnail_cbmkzf.png">
 
     <!-- Twitter Preview (Also used by some other apps) -->
     <meta property="twitter:card" content="summary_large_image">
@@ -32,7 +33,7 @@
     <meta property="twitter:title" content="Pierre & Kristine | Wedding Invitation">
     <meta property="twitter:description" content="Join us as we celebrate our love on July 03, 2026.">
     <meta property="twitter:image"
-        content="https://res.cloudinary.com/dqtl8miee/image/upload/v1779197323/thumbnail_yae9yw.png">
+        content="https://res.cloudinary.com/dqtl8miee/image/upload/v1779793087/thumbnail_cbmkzf.png">
 </head>
 
 <body>
@@ -40,8 +41,7 @@
     <!-- Background Music -->
     <audio id="wedding-music" loop>
         <!-- Replace the URL below with your actual music file link (MP3) -->
-        <source
-            src="https://res.cloudinary.com/dqtl8miee/video/upload/v1779009271/Violin_Piano_Duo_-_I_Love_You_Always_Forever_-_Donna_Lewis_zwcr1g.mp3"
+        <source src="https://res.cloudinary.com/dqtl8miee/video/upload/v1779759904/Pierre_and_Tin_iw3zof.mp3"
             type="audio/mpeg">
     </audio>
 
@@ -59,23 +59,55 @@
     </div>
 
     <!-- 1. Invitation Landing Overlay -->
-    <div id="invitation-overlay">
+    <!-- <div id="invitation-overlay">
         <div class="overlay-content">
-            <!-- Enhanced Subtitle -->
             <p class="subtitle">TOGETHER WITH OUR FAMILIES, WE JOYFULLY INVITE YOU TO CELEBRATE OUR LOVE</p>
 
             <h1 class="couple-names">Pierre <span>&</span> Kristine</h1>
 
-            <!-- Boxed Date -->
             <div class="invitation-stack">
                 <div class="date-row">JULY 03, 2026</div>
             </div>
 
-            <!-- Button outside the box -->
             <div class="button-row">
                 <button id="open-invitation-btn">Open Invitation</button>
             </div>
         </div>
+    </div> -->
+
+    <!-- 1. THE FINAL ELEGANT REVEAL (BURGUNDY BUTTON / WHITE TEXT) -->
+    <div id="invitation-overlay" class="final-linen-overlay">
+
+        <!-- Restored Linen Background -->
+        <div class="final-linen-texture"></div>
+        <div class="final-soft-glow"></div>
+
+        <div class="final-main-content">
+            <!-- Center Typography -->
+            <div class="final-center-stack">
+                <h1 class="final-names">Pierre <span>&</span> Kristine</h1>
+                <p class="final-status">ARE GETTING MARRIED</p>
+
+                <div class="final-action">
+                    <!-- BURGUNDY BUTTON WITH WHITE TEXT -->
+                    <button id="open-invitation-btn" class="final-btn-burgundy">
+                        <span class="final-btn-white-text">OPEN INVITATION</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editorial Corner Info -->
+        <!-- <div class="final-corners">
+        <div class="f-corner f-bottom-left">
+            <p class="f-label">DATE & TIME</p>
+            <p>JULY 03, 2026 — 2:30 PM</p>
+        </div>
+        <div class="f-corner f-bottom-right">
+            <p class="f-label">THE VENUE</p>
+            <p>SAN AGUSTIN CHURCH — THE MANILA HOTEL</p>
+        </div>
+    </div> -->
     </div>
 
     <!-- Navigation Bar -->
@@ -164,9 +196,9 @@
                 </p>
 
                 <div class="formal-invite">
-                    <p class="request">WITH JOYFUL HEARTS, WE INVITE YOU TO WITNESS THE UNION OF</p>
+                    <p class="request">TOGETHER WITH OUR FAMILIES, WE</p>
                     <h2 class="script-names">Pierre & Kristine</h2>
-                    <p class="request">AS WE EXCHANGE VOWS AND BEGIN OUR LIVES TOGETHER</p>
+                    <p class="request">INVITE YOU</p>
                 </div>
 
                 <div class="date-display">
@@ -174,7 +206,7 @@
                     <div class="date-details">
                         <span class="day">FRIDAY</span>
                         <span class="full-date">JULY 03, 2026</span>
-                        <span class="time">AT HALF PAST TWO IN THE AFTERNOON</span>
+                        <span class="time">2:30 IN THE AFTERNOON</span>
                     </div>
                     <div class="line"></div>
                 </div>
@@ -182,25 +214,20 @@
         </div>
     </section>
 
-    <!-- Details Section -->
+    <!-- Details Section
     <section class="section details" id="details">
         <div class="container">
             <h2 class="section-title">The Celebration</h2>
             <p class="details-intro">We can't wait to share these moments with you.</p>
 
             <div class="details-grid">
-                <!-- Ceremony Card -->
                 <div class="details-card reveal">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <!-- Towers -->
                             <path d="M5 22V9l3-3v16M16 22V9l3-3v16"></path>
-                            <!-- Main Roof -->
                             <path d="M8 12l4-4 4 4v10H8V12z"></path>
-                            <!-- The Arched Doorway -->
                             <path d="M10 22v-4a2 2 0 0 1 4 0v4"></path>
-                            <!-- The Cross -->
                             <path d="M12 3v5M10 5.5h4"></path>
                         </svg>
                     </div>
@@ -223,18 +250,13 @@
 
                 <div class="details-divider"></div>
 
-                <!-- Reception Card -->
                 <div class="details-card reveal">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <!-- Base line -->
                             <path d="M2 22h20"></path>
-                            <!-- Grand Structure -->
                             <path d="M4 22V10l4-4 4-2 4 2 4 4v12"></path>
-                            <!-- Main Ballroom Entrance -->
                             <path d="M9 22v-5a3 3 0 0 1 6 0v5"></path>
-                            <!-- Window Details -->
                             <path d="M7 13h2M15 13h2M7 17h2M15 17h2"></path>
                         </svg>
                     </div>
@@ -256,38 +278,296 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <!-- <section class="section details" id="details">
+        <div class="container">
+            <h2 class="section-title">Scheduled Events</h2> 
+
+            <div class="details-grid">
+                <div class="details-card reveal">
+                    <h3 style="font-family: 'Great Vibes'; font-size: 3rem;color: #000000;">Ceremony</h3>
+                    <p class="event-time">2:30 PM</p>
+                    <p>San Agustin Church</p>
+                    <button class="map-link">View Details</button> 
+                </div>
+
+                <div class="details-card reveal">
+                    <h3 style="font-family: 'Great Vibes'; font-size: 3rem; color: #000000;;">Reception</h3>
+                    <p class="event-time">6:00 PM</p>
+                    <p>The Manila Hotel</p>
+                    <button class="map-link">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="v5-events" id="details">
+        <!-- Physical Paper Background Decorations -->
+        <img src="https://res.cloudinary.com/dqtl8miee/image/upload/v1779197323/floral-line-art.png"
+            class="v5-decor v5-flower-top" alt="floral">
+        <img src="https://res.cloudinary.com/dqtl8miee/image/upload/v1779197323/floral-line-art.png"
+            class="v5-decor v5-flower-bottom" alt="floral">
+
+        <div class="v5-container">
+            <h2 class="section-title">Scheduled Events</h2>
+
+            <!-- ONE BIG PHYSICAL CARD -->
+            <div class="v5-program-card reveal">
+                <!-- The Binder Clip at the top -->
+                <div class="v5-clip"></div>
+
+                <div class="v5-stamp-outer">
+                    <div class="v5-stamp-inner">
+
+                        <!-- CEREMONY SECTION -->
+                        <div class="v5-event-block">
+                            <h3 class="v7-script-title">Ceremony</h3>
+                            <p class="v5-time">02:30 IN THE AFTERNOON</p>
+                            <p class="v5-venue">San Agustin Church</p>
+                            <p class="v5-address">Intramuros, Manila</p>
+                            <a href="https://maps.app.goo.gl/..." class="v5-map-link">VIEW ON MAPS</a>
+                        </div>
+
+                        <!-- DIVIDER: Building Illustration -->
+                        <div class="v5-divider">
+                            <div class="v5-line"></div>
+                            <svg class="v5-hotel-svg" viewBox="0 0 100 100">
+                                <path
+                                    d="M20,90 L20,30 L50,10 L80,30 L80,90 M20,50 L80,50 M35,30 L35,90 M65,30 L65,90 M40,60 L45,60 M55,60 L60,60"
+                                    fill="none" stroke="#581021" stroke-width="1" />
+                            </svg>
+                            <div class="v5-line"></div>
+                        </div>
+
+                        <!-- RECEPTION SECTION -->
+                        <div class="v5-event-block">
+                            <h3 class="v7-script-title">Reception</h3>
+                            <p class="v5-time">06:00 IN THE EVENING</p>
+                            <p class="v5-venue">The Manila Hotel</p>
+                            <p class="v5-address">One Rizal Park, Manila</p>
+                            <a href="https://maps.app.goo.gl/..." class="v5-map-link">VIEW ON MAPS</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
-    <!-- Entourage Section -->
+    <!-- FINAL EDITORIAL ENTOURAGE SECTION -->
+    <section class="v7-entourage" id="entourage">
+        <!-- SVG Botanical Drawings (Fail-safe code) -->
+        <!-- <div class="v7-flower v7-f-top">
+        <svg viewBox="0 0 500 500" fill="none"><path d="M250 450C250 450 150 350 150 250C150 150 250 50 250 50M250 450C250 450 350 350 350 250C350 150 250 50 250 50" stroke="black" stroke-width="1.2" opacity="0.2"/></svg>
+    </div>
+    <div class="v7-flower v7-f-bottom">
+        <svg viewBox="0 0 500 500" fill="none"><path d="M250 450C250 450 150 350 150 250C150 150 250 50 250 50M250 450C250 450 350 350 350 250C350 150 250 50 250 50" stroke="black" stroke-width="1.2" opacity="0.2"/></svg>
+    </div> -->
+
+        <div class="v7-container">
+            <!-- HEADER -->
+            <div class="v7-header reveal">
+                <h2 class="v7-script-title">The Entourage</h2>
+                <p class="v7-section-sub">Those who walk beside us as we begin our journey</p>
+                <div class="v7-ornament">❦</div>
+            </div>
+
+            <!-- 1. THE PARENTS -->
+            <div class="v7-spread reveal">
+                <div class="v7-paper v7-tilt-left">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">Bride's Parents</span>
+                        <p class="v7-name">Mr. Ernesto Go Raymundo Jr.</p>
+                        <p class="v7-name">Mrs. Elizabeth Raymundo</p>
+                    </div>
+                </div>
+                <div class="v7-paper v7-tilt-right">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">Groom's Parents</span>
+                        <p class="v7-name">Mr. Narciso De Borja Jr. <small>(†)</small></p>
+                        <p class="v7-name">Mrs. Yolanda De Borja</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. PRINCIPAL SPONSORS -->
+            <div class="v7-centerpiece reveal">
+                <!-- <div class="v7-wax-seal"><span>P&K</span></div> -->
+                <div class="v7-wax-seal">
+                    <img src="monogram3.png" alt="Monogram">
+                </div>
+                <div class="v7-stamp-card">
+                    <div class="v7-stamp-inner">
+                        <h3 class="v7-script-title">Principal Sponsors</h3>
+                        <div class="v7-sponsor-grid">
+                            <div class="v7-col">
+                                <p>Dr. Rizalino Dela Fuente Jr.</p>
+                                <p>Hon. Carlo Santos</p>
+                                <p>Judge Bernard Bernal</p>
+                                <p>Hon. Ricardo Cruz Jr.</p>
+                                <p>Mr. Eliseo Go</p>
+                                <p>Mr. Marites Go</p>
+                                <p>Mr. Ericson Go Raymundo</p>
+                                <p>Mr. Juanito Go Jr.</p>
+                                <p>Mr. Denierick Rimando</p>
+                                <p>Mr. Ace Calderon</p>
+                                <p>Mr. Fidel Balidio</p>
+                                <p>Engr. Jaymar Caya</p>
+                            </div>
+                            <div class="v7-col">
+                                <p>Mrs. Susan Co Dela Fuente</p>
+                                <p>Ms. Anna Lira Reyes</p>
+                                <p>Ms. Wendy Paredes</p>
+                                <p>Ms. Cristeta Flores</p>
+                                <p>Ms. Nenette Tañga</p>
+                                <p>Ms. Carmencita Tuazon</p>
+                                <p>Mrs. Meliza Raymundo</p>
+                                <p>Ms. Catlyn Palamara</p>
+                                <p>Ms. Sherry Anne Moreno</p>
+                                <p>Mrs. Marites Calderon</p>
+                                <p>Mrs. Leticia Balidio</p>
+                                <p>Mrs. Sulieta Caya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. HONOR ROLES -->
+            <div class="v7-spread reveal">
+                <div class="v7-paper v7-tilt-right">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <!-- <span class="v7-tag">Maid of Honor</span>
+                    <p class="v7-name">Ms. Kimberly Anne Raymundo-Cruz</p>
+                    <div class="v7-mini-divider"></div> -->
+                        <span class="v7-tag">Siblings of Honor</span>
+                        <p class="v7-name">Mr. Karl Ernest Raymundo</p>
+                        <p class="v7-name">Ms. Kimberly Anne Raymundo-Cruz</p>
+                    </div>
+                </div>
+                <div class="v7-paper v7-tilt-left">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">Best Men</span>
+                        <p class="v7-name">Mr. Christian Bukalan</p>
+                        <p class="v7-name">Mr. Janrhee Absing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. SYMBOLS OF UNITY -->
+            <div class="v7-centerpiece reveal">
+                <div class="v7-stamp-card">
+                    <div class="v7-stamp-inner" style="padding: 40px 20px;">
+                        <h3 class="v7-script-title" style="font-size: 3rem; margin-bottom: 30px;">Symbols of Unity</h3>
+                        <div class="v7-badge-spread">
+                            <div class="v7-sec-item"><span class="v7-tag">Candle</span>
+                                <p>Mr. Xyrus Peralta</p>
+                                <p>Mrs. Princess Peralta</p>
+                            </div>
+                            <div class="v7-sec-item"><span class="v7-tag">Veil</span>
+                                <p>Mr. Jorman Huevos</p>
+                                <p>Atty. Patricia Huevos</p>
+                            </div>
+                            <div class="v7-sec-item"><span class="v7-tag">Cord</span>
+                                <p>Mr. Rolando Dionisio II</p>
+                                <p>Mrs. Maureen Dionisio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. WEDDING PARTY -->
+            <div class="v7-spread reveal">
+                <div class="v7-paper v7-tilt-left" style="width: 400px; max-width: 90%;">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">The Groomsmen</span>
+                        <div class="v7-names-list">
+                            <p>Mr. Joseph Creencia</p>
+                            <p>Dr. Ruben Carlo Reyes</p>
+                            <p>Mr. Robipher De Leon</p>
+                            <p>Mr. John Earl De Borja</p>
+                            <p>Hon. Emmanuel Tañga</p>
+                            <p>Mr. Christian Neri Ortiz</p>
+                            <p>Mr. Gerald Cometa</p>
+                            <p>Mr. Ron Cansino</p>
+                            <p>Mr. Arnel Ambrosio</p>
+                            <p>Mr. Jonard Tan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="v7-paper v7-tilt-right" style="width: 400px; max-width: 90%;">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">The Bridesmaids</span>
+                        <div class="v7-names-list">
+                            <p>Ms. Elissa Jane Miraflor</p>
+                            <p>Ms. Maria Teresa De Los Santos</p>
+                            <p>Ms. Stephanie Torilla</p>
+                            <p>Ms. Marjorie Ann Raymundo</p>
+                            <p>Ms. Czarina Marie Tauro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. LITTLE ONES -->
+            <div class="v7-spread reveal">
+                <div class="v7-paper v7-tilt-right">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">The Bearers</span>
+                        <p class="v7-name">Xylas Pablo Peralta <small>(Ring)</small></p>
+                        <p class="v7-name">Sebastian Kai De Borja <small>(Coin)</small></p>
+                        <p class="v7-name">Zacharias Braeden Bukalan <small>(Bible)</small></p>
+                    </div>
+                </div>
+                <div class="v7-paper v7-tilt-left">
+                    <div class="v7-clip"></div>
+                    <div class="v7-paper-inner">
+                        <span class="v7-tag">Flower Squad</span>
+                        <p class="v7-name">Ms. Erica Justine Raymundo</p>
+                        <p class="v7-name">Ms. Kaiana Shane Raymundo</p>
+                        <p class="v7-name">Ms. Nina Marienela Raymundo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entourage Section
     <section class="section entourage-enchanted" id="entourage">
         <div class="container">
-            <!-- Header -->
             <div class="entourage-header reveal">
-                <h2 class="section-title">The Wedding Party</h2>
-                <p class="entourage-subtitle">Those who walk beside us as we begin our journey</p>
+                <h2 class="section-title">The Entourage</h2>
+                <p class="details-intro">Those who walk beside us as we begin our journey</p>
                 <div class="floral-divider">❦</div>
             </div>
 
-            <!-- 1. Parents Section -->
             <div class="entourage-row parents reveal">
                 <div class="entourage-card">
-                    <span class="role-tag">Bride's Pillars</span>
+                    <span class="role-tag">Bride's Parents</span>
                     <p class="name">Mr. Ernesto Go Raymundo Jr.</p>
                     <p class="name">Mrs. Elizabeth Raymundo</p>
                 </div>
                 <div class="entourage-card">
-                    <span class="role-tag">Groom's Pillars</span>
+                    <span class="role-tag">Groom's Parents</span>
                     <p class="name">Mr. Narciso De Borja Jr. <small>(†)</small></p>
                     <p class="name">Mrs. Yolanda De Borja</p>
                 </div>
             </div>
 
-            <!-- 2. Principal Sponsors -->
             <div class="entourage-block sponsors-block reveal">
                 <div class="enchanted-frame">
                     <h3 class="group-title">Principal Sponsors</h3>
-                    <p class="tagline">To stand as witnesses to our sacred vows</p>
+                    <p class="details-intro">To stand as witnesses to our sacred vows</p>
                     <div class="sponsor-grid">
                         <div class="sponsor-col">
                             <p>Dr. Rizalino Dela Fuente Jr.</p>
@@ -308,7 +588,7 @@
                             <p>Ms. Anna Lira Reyes</p>
                             <p>Ms. Wendy Paredes</p>
                             <p>Ms. Cristeta Flores</p>
-                            <p>Ms. Nenette Taña</p>
+                            <p>Ms. Nenette Tañga</p>
                             <p>Ms. Carmencita Tuazon</p>
                             <p>Mrs. Meliza Raymundo</p>
                             <p>Ms. Catlyn Palamara</p>
@@ -321,7 +601,6 @@
                 </div>
             </div>
 
-            <!-- 3. Honor Roles -->
             <div class="entourage-row honor-roles reveal">
                 <div class="entourage-card">
                     <span class="role-tag">Best Men</span>
@@ -335,12 +614,10 @@
                 </div>
             </div>
 
-            <!-- 4. Secondary Sponsors (Enchanted Symbols) -->
             <div class="secondary-symbols reveal">
                 <h3 class="section-title">The Symbols of Unity</h3>
                 <div class="symbol-grid">
 
-                    <!-- Candle -->
                     <div class="symbol-item">
                         <div class="symbol-icon-box">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
@@ -348,13 +625,12 @@
                                 <path d="M12 9v12M12 3c1.1 0 2 1.8 2 3s-.9 3-2 3-2-1.8-2-3 .9-3 2-3z" />
                             </svg>
                         </div>
-                        <span class="symbol-name">THE CANDLE</span>
+                        <span class="role-tag">THE CANDLE</span>
                         <p class="tagline">To light our path</p>
                         <p class="name">Mr. Xyrus Peralta</p>
                         <p class="name">Mrs. Princess Paulette Peralta</p>
                     </div>
 
-                    <!-- Veil -->
                     <div class="symbol-item">
                         <div class="symbol-icon-box">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
@@ -369,7 +645,6 @@
                         <p class="name">Atty. Patricia Pamela Huevos</p>
                     </div>
 
-                    <!-- Cord -->
                     <div class="symbol-item">
                         <div class="symbol-icon-box">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
@@ -387,38 +662,36 @@
                 </div>
             </div>
 
-            <!-- 5. Wedding Party -->
             <div class="party-container reveal">
                 <div class="party-split">
                     <div class="party-col">
                         <h3 class="party-title">The Groomsmen</h3>
                         <div class="names-list">
-                            <p>Joseph Creencia</p>
+                            <p>Mr. Joseph Creencia</p>
                             <p>Dr. Ruben Carlo Reyes</p>
-                            <p>Robipher De Leon</p>
-                            <p>John Earl De Borja</p>
-                            <p>Hon. Emmanuel Taña</p>
-                            <p>Christian Neri Ortiz</p>
-                            <p>Gerald Cometa</p>
-                            <p>Ron Cansino</p>
-                            <p>Arnel Ambrosio</p>
-                            <p>Jonard Tan</p>
+                            <p>Mr. Robipher De Leon</p>
+                            <p>Mr. John Earl De Borja</p>
+                            <p>Hon. Emmanuel Tañga</p>
+                            <p>Mr. Christian Neri Ortiz</p>
+                            <p>Mr. Gerald Cometa</p>
+                            <p>Mr. Ron Cansino</p>
+                            <p>Mr. Arnel Ambrosio</p>
+                            <p>Mr. Jonard Tan</p>
                         </div>
                     </div>
                     <div class="party-col">
                         <h3 class="party-title">The Bridesmaids</h3>
                         <div class="names-list">
-                            <p>Elissa Jane Miraflor</p>
-                            <p>Maria Teresa De Los Santos</p>
-                            <p>Stephanie Torilla</p>
-                            <p>Marjorie Ann Raymundo</p>
-                            <p>Czarina Marie Tauro</p>
+                            <p>Ms. Elissa Jane Miraflor</p>
+                            <p>Ms. Maria Teresa De Los Santos</p>
+                            <p>Ms. Stephanie Torilla</p>
+                            <p>Ms. Marjorie Ann Raymundo</p>
+                            <p>Ms. Czarina Marie Tauro</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 6. Bearers & Flower Squad -->
             <div class="kids-section reveal">
                 <div class="kids-grid">
                     <div class="kid-card">
@@ -436,57 +709,133 @@
                 </div>
                 <div class="flower-squad-box">
                     <span class="role-tag">Flower Squad</span>
-                    <p class="name">Ms. Erica Justine • Ms. Kaiana Shane • Ms. Nina Marienela</p>
+                    <p class="name">Ms. Erica Justine Raymundo • Ms. Kaiana Shane Raymundo • Ms. Nina Marienela Raymundo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- SCRAPBOOK GALLERY SECTION -->
+    <section class="v8-gallery" id="gallery">
+        <div class="v8-container">
+            <!-- HEADER -->
+            <div class="v8-header reveal">
+                <h2 class="v7-script-title">Captured Moments</h2>
+                <p class="v8-section-sub">A glimpse into our journey</p>
+            </div>
+
+            <div class="v8-collage reveal">
+                <!-- 1. THE BURGUNDY BOOK (Our Story) -->
+                <div class="v8-book v8-tilt-left">
+                    <div class="v8-book-inner">
+                        <div class="v8-book-monogram">P & K</div>
+                        <h3 class="v8-book-title">Our Story</h3>
+                    </div>
+                </div>
+
+                <!-- 2. SCATTERED POLAROIDS -->
+                <!-- Photo 1 -->
+                <div class="v8-polaroid v8-p1">
+                    <div class="v8-tape"></div> <!-- Washi Tape effect -->
+                    <div class="v8-img-frame"><img src="1.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="v8-polaroid v8-p2">
+                    <div class="v8-img-frame"><img src="2.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="v8-polaroid v8-p3">
+                    <div class="v8-tape v8-tape-angle"></div>
+                    <div class="v8-img-frame"><img src="3.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Hand-drawn Label -->
+                <div class="v8-label-arrow">
+                    <p class="v8-handwriting">Prenup Photos</p>
+                    <svg viewBox="0 0 100 50" class="v8-arrow-svg">
+                        <path d="M10,10 Q40,40 80,10" fill="none" stroke="black" stroke-width="2" />
+                        <polyline points="70,10 80,10 80,20" fill="none" stroke="black" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="v8-polaroid v8-p4">
+                    <div class="v8-img-frame"><img src="4.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="v8-polaroid v8-p5">
+                    <div class="v8-tape"></div>
+                    <div class="v8-img-frame"><img src="5.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="v8-polaroid v8-p6">
+                    <div class="v8-img-frame"><img src="6.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="v8-polaroid v8-p7">
+                    <div class="v8-img-frame"><img src="7.jpg" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="v8-polaroid v8-p8">
+                    <div class="v8-tape v8-tape-angle"></div>
+                    <div class="v8-img-frame"><img src="8.JPG" alt="Moment"></div>
+                </div>
+
+                <!-- Photo 9 (Hero) -->
+                <div class="v8-polaroid v8-p9">
+                    <div class="v8-img-frame"><img src="hero.JPG" alt="Moment"></div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- Gallery Section -->
-    <section class="section gallery" id="gallery">
+    <!-- <section class="section gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Captured Moments</h2>
             <p class="gallery-subtitle">A glimpse into our journey</p>
 
             <div class="square-gallery-grid">
-                <!-- Image 1 -->
+
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="1.JPG" alt="Moments">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
-                <!-- Image 2 -->
+
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="2.JPG" alt="Moments">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
-                <!-- Image 3 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="3.JPG" alt="Moments">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
-                <!-- Image 4 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="4.JPG" alt="Moments">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
-                <!-- Image 5 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="5.JPG" alt="Moments">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
-                <!-- Image 6 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="6.JPG" alt="Moments">
@@ -494,7 +843,6 @@
                     </div>
                 </div>
 
-                <!-- Image 8 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="8.JPG" alt="Moments">
@@ -502,7 +850,6 @@
                     </div>
                 </div>
 
-                <!-- Image 7 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="7.jpg" alt="Moments">
@@ -510,7 +857,6 @@
                     </div>
                 </div>
 
-                <!-- Image 9 -->
                 <div class="gallery-card reveal">
                     <div class="image-inner">
                         <img src="hero.JPG" alt="Moments">
@@ -519,10 +865,68 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <!-- LUXURY STATIONERY ATTIRE GUIDE -->
+    <section class="v9-attire" id="attire">
+        <div class="v9-container">
+            <!-- HEADER -->
+            <div class="v9-header reveal">
+                <h2 class="v9-section-title">Attire Guide</h2>
+                <p class="v9-section-sub">Dressing for the Occasion</p>
+            </div>
+
+            <!-- THE PHYSICAL ATTIRE CARD -->
+            <div class="v9-palette-card reveal">
+                <!-- Binder Clip -->
+                <div class="v9-clip"></div>
+
+                <div class="v9-card-inner">
+                    <div class="v9-content-box">
+                        <h3 class="v9-tag">Strictly Formal</h3>
+
+                        <div class="v9-guest-types">
+                            <div class="v9-type">
+                                <p class="v9-label">GENTLEMEN</p>
+                                <p class="v9-val">Black Suit and Tie</p>
+                            </div>
+                            <div class="v9-type">
+                                <p class="v9-label">LADIES</p>
+                                <p class="v9-val">Long Dress or Gown</p>
+                            </div>
+                        </div>
+
+                        <div class="v9-instruction">
+                            <p>We request everyone to dress according to our color palette.</p>
+                        </div>
+
+                        <!-- THE "FABRIC SWATCHES" -->
+                        <div class="v9-swatch-row">
+                            <div class="v9-swatch c1"></div>
+                            <div class="v9-swatch c2"></div>
+                            <div class="v9-swatch c3"></div>
+                            <div class="v9-swatch c4"></div>
+                            <div class="v9-swatch c5"></div>
+                        </div>
+
+                        <!-- SPONSOR INFO -->
+                        <div class="v9-sponsor-attire">
+                            <h4 class="v9-label" style="color: #581021;">For Principal Sponsors</h4>
+                            <p><strong>Gentlemen:</strong> Black Suit and Tie</p>
+                            <p><strong>Ladies:</strong> Long Dress or Gown in Burgundy</p>
+                        </div>
+
+                        <p class="v9-restriction">Kindly refrain from wearing White, Champagne, Nude or Beige attire.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+
     <!-- Attire Section -->
-    <section class="section attire" id="attire">
+    <!-- <section class="section attire" id="attire">
         <div class="container reveal">
             <h2 class="section-title">Attire Guide</h2>
             <div class="attire-container">
@@ -536,17 +940,17 @@
                     <p class="attire-request">WE REQUEST THAT EVERYONE DRESS ACCORDING TO OUR COLOR PALETTE.</p>
 
                     <div class="palette-grid">
-                        <div class="swatch c1"><span class="swatch-label">Burgundy</span></div>
+                        <div class="swatch c1"></div>
                         <div class="swatch c2"></div>
                         <div class="swatch c3"></div>
                         <div class="swatch c4"></div>
-                        <div class="swatch c5"><span class="swatch-label">Blush</span></div>
+                        <div class="swatch c5"></div>
                     </div>
 
                     <div class="sponsor-attire">
                         <p class="sponsor-header">FOR PRINCIPAL SPONSORS:</p>
                         <p><strong>GENTLEMEN:</strong> BLACK SUIT AND TIE</p>
-                        <p><strong>LADIES:</strong> LONG DRESS OR GOWN IN <strong>BURGUNDY</strong></p>
+                        <p><strong>LADIES:</strong> LONG DRESS OR GOWN IN BURGUNDY</p>
                     </div>
 
                     <p class="attire-restriction">KINDLY REFRAIN FROM WEARING WHITE, CHAMPAGNE, NUDE OR BEIGE ATTIRE.
@@ -555,21 +959,17 @@
             </div>
         </div>
     </section>
+ -->
 
-
-    <section class="section enchanted-rsvp" id="rsvp">
+    <!-- <section class="section enchanted-rsvp" id="rsvp">
         <div class="container">
 
-            <!-- The Floating Enchanted Card -->
             <div class="enchanted-card reveal">
 
-                <!-- Corner Decorations -->
                 <div class="corner-leaf top-left"></div>
                 <div class="corner-leaf bottom-right"></div>
 
-                <!-- Gifts Section -->
                 <div class="enchanted-section gift-area">
-                    <!-- Digital Wax Seal -->
                     <div class="wax-seal">
                         <span>P&K</span>
                     </div>
@@ -583,14 +983,12 @@
                     </div>
                 </div>
 
-                <!-- Elegant Divider -->
                 <div class="magic-divider">
                     <div class="line"></div>
                     <div class="sparkle">✦</div>
                     <div class="line"></div>
                 </div>
 
-                <!-- RSVP Section -->
                 <div class="enchanted-section rsvp-area">
                     <h2 class="section-title">The RSVP</h2>
                     <p class="rsvp-sub">WE WOULD BE DELIGHTED TO HAVE YOUR RESPONSE BY</p>
@@ -612,43 +1010,239 @@
             </div>
 
         </div>
+    </section> -->
+
+
+
+    <!-- Wishing Well Section -->
+    <!-- <section class="section enchanted-gifts" id="gifts">
+        <div class="container">
+            <div class="enchanted-card reveal">
+                <div class="wax-seal">
+                    <span>P&K</span>
+                </div>
+                <h2 class="section-title">Wishing Well</h2>
+                <div class="enchanted-body">
+                    <p>With all that we have, we are truly blessed.</p>
+                    <p>Your presence and prayers are all that we request.</p>
+                    <p class="script-quote">"However, if you wish to give nonetheless,<br>a monetary gift would be
+                        greatly appreciated."</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- RSVP Section -->
+    <!-- <section class="section enchanted-rsvp" id="rsvp">
+        <div class="container">
+            <div class="enchanted-card reveal">
+                <div class="corner-leaf top-left"></div>
+                <div class="corner-leaf bottom-right"></div>
+
+                <h2 class="section-title">The RSVP</h2>
+                <p class="rsvp-sub">WE WOULD BE DELIGHTED TO HAVE YOUR RESPONSE BY</p>
+                <div class="rsvp-date-frame">
+                    <h3>JUNE 02, 2026</h3>
+                </div>
+
+                <form id="rsvp-form" class="enchanted-form">
+                    <div class="form-group">
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-group radio-group">
+                        <p class="form-label">Will you attend?</p>
+                        <div class="radio-options">
+                            <label class="radio-container">
+                                <input type="radio" name="attendance" value="attending" required>
+                                <span class="checkmark"></span> Joyfully Accepts
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="attendance" value="declined">
+                                <span class="checkmark"></span> Regretfully Declines
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="guest-count-group">
+                        <label class="form-label">Number of Guests</label>
+                        <select name="guests">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message for the Couple / Dietary Restrictions"
+                            rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Response</button>
+                </form>
+
+                <div class="magic-divider">
+                    <div class="line"></div>
+                    <div class="sparkle">✦</div>
+                    <div class="line"></div>
+                </div>
+
+                <p class="rsvp-sub">OR YOU MAY CONTACT US DIRECTLY</p>
+                <div class="enchanted-contacts">
+                    <div class="contact-item">
+                        <span class="role">KRISTINE</span>
+                        <a href="tel:09171030838" class="val">0917 103 0838</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="role">PIERRE</span>
+                        <a href="tel:09178321608" class="val">0917 832 1608</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- SECTION 10: THE WISHING WELL (GIFT CARD) -->
+    <section class="v11-well" id="gifts">
+        <div class="v11-container">
+            <div class="v11-card reveal">
+                <!-- BLACK WAX SEAL -->
+                <!-- <div class="v11-wax-seal"><span>P&K</span></div> -->
+
+                <div class="v7-wax-seal">
+                    <img src="monogram3.png" alt="Monogram">
+                </div>
+                <div class="v11-card-inner">
+                    <h2 class="v11-script-title">Wishing Well</h2>
+                    <div class="v11-body-text">
+                        <p>With all that we have, we are truly blessed.</p>
+                        <p>Your presence and prayers are all that we request.</p>
+                        <p class="v11-quote">"However, if you wish to give nonetheless, <br>a monetary gift would be
+                            greatly appreciated."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- SECTION 11: THE RSVP (REPLY CARD) -->
+    <section class="v12-rsvp" id="rsvp">
+        <div class="v12-container">
+            <div class="v12-reply-card reveal">
+                <!-- Consistent Binder Clip -->
+                <div class="v12-clip"></div>
 
-    <footer class="enchanted-footer">
+                <div class="v12-card-inner">
+                    <span class="v12-tag">The RSVP</span>
+                    <!-- <h2 class="v12-script-title">Kindly Respond</h2>
+                    <p class="v12-deadline">BY JUNE 02, 2026</p> -->
+
+                    <div id="rsvp-header">
+                        <h2 class="v12-script-title">Kindly Respond</h2>
+                        <p class="v12-deadline">BY JUNE 02, 2026</p>
+                    </div>
+
+                    <!-- FORM -->
+                    <form id="rsvp-form" class="v12-form">
+                        <div class="v12-row">
+                            <input type="text" name="full_name" placeholder="YOUR FULL NAME" required>
+                        </div>
+
+                        <div class="v12-radio-group">
+                            <label class="v12-radio">
+                                <input type="radio" name="attendance" value="attending" required>
+                                <span class="v12-dot"></span> JOYFULLY ACCEPTS
+                            </label>
+                            <label class="v12-radio">
+                                <input type="radio" name="attendance" value="declined">
+                                <span class="v12-dot"></span> REGRETFULLY DECLINES
+                            </label>
+                        </div>
+
+                        <div id="guest-count-group" class="v12-row">
+                            <label class="v12-field-label">NUMBER OF GUESTS</label>
+                            <input type="number" name="guests" min="1" max="10" value="1" class="v12-number-input">
+                        </div>
+
+                        <div class="v12-row">
+                            <textarea name="message" placeholder="MESSAGE" rows="2"></textarea>
+                        </div>
+
+                        <button type="submit" class="v12-btn">SEND RESPONSE</button>
+                    </form>
+
+                    <div id="rsvp-thank-you" class="v12-success-ui" style="display: none;">
+                        <div class="v12-success-content">
+                            <h3 class="v12-script-title" style="font-size: 3.5rem;">Thank You!</h3>
+                            <div class="v12-ornament">❦</div>
+                            <p class="v12-success-text">Your response has been successfully recorded.</p>
+                            <p class="v12-success-sub">We are so excited to celebrate our greatest adventure with you!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="v12-footer">
+                        <p>DIRECT CONTACT</p>
+                        <div class="v12-contact-links">
+                            <a href="tel:09171030838">KRISTINE: 0917 103 0838</a>
+                            <a href="tel:09178321608">PIERRE: 0917 832 1608</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 13: THE FOOTER (FINAL MONOGRAM) -->
+    <footer class="v13-footer">
+        <div class="v13-container">
+
+            <!-- FINAL STATIONERY MONOGRAM -->
+            <!-- <div class="v13-monogram-box reveal">
+                <div class="v13-monogram">P & K</div>
+            </div> -->
+
+            <div class="v13-content reveal">
+                <h3 class="v13-names">Pierre <span>&</span> Kristine</h3>
+                <p class="v13-date">07 . 03 . 2026</p>
+
+                <!-- Elegant Ornamental Divider -->
+                <div class="v13-ornament">❦</div>
+
+                <div class="v13-credits">
+                    <p>MADE WITH LOVE FOR OUR FAMILY & FRIENDS</p>
+                    <p>&copy; 2026 PIERRE & KRISTINE WEDDING</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- <footer class="enchanted-footer">
         <div class="container">
-            <!-- Final Monogram -->
             <div class="footer-monogram">P & K</div>
 
-            <!-- Main Footer Text -->
             <div class="footer-content">
                 <h3 class="footer-names">Pierre <span>&</span> Kristine</h3>
                 <p class="footer-date">07 . 03 . 2026</p>
             </div>
 
-            <!-- Optional Wedding Hashtag -->
-            <div class="footer-hashtag">
-                <p>#PierreFoundHisKristine</p>
-            </div>
 
             <div class="footer-credit">
                 <p>Made with love for our family & friends</p>
                 <p>&copy; 2026 Pierre & Kristine Wedding</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Back to Top Ornament -->
-    <div id="back-to-top" class="hidden">
+    <!-- <div id="back-to-top" class="hidden">
         <button aria-label="Back to Top">
-            <!-- The Progress Ring -->
             <svg class="progress-ring" width="54" height="54">
                 <circle class="progress-ring__circle-bg" stroke="rgba(88, 16, 33, 0.1)" stroke-width="2"
                     fill="transparent" r="24" cx="27" cy="27" />
                 <circle id="scroll-progress" class="progress-ring__circle" stroke="#581021" stroke-width="2"
                     fill="transparent" r="24" cx="27" cy="27" />
             </svg>
-            <!-- The Arrow (Inside the ring) -->
             <div class="arrow-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -656,6 +1250,38 @@
                 </svg>
             </div>
         </button>
+    </div> -->
+
+    <!-- REFINED BACK TO TOP (CLEAR ARROW VERSION) -->
+    <div id="back-to-top" class="v14-btt hidden">
+        <button aria-label="Back to Top">
+            <!-- The Elegant Progress Ring -->
+            <svg class="v14-ring" width="56" height="56">
+                <circle class="v14-ring-bg" cx="28" cy="28" r="24" />
+                <circle id="scroll-progress" class="v14-ring-fill" cx="28" cy="28" r="24" />
+            </svg>
+
+            <!-- Permanent Arrow Icon -->
+            <div class="v14-icon-box">
+                <svg class="v14-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <!-- AESTHETIC OVAL RSVP GUIDE -->
+    <div id="rsvp-guide" class="v16-rsvp-pill hidden">
+        <a href="#rsvp" aria-label="Go to RSVP">
+            <div class="v16-button">
+                <span class="v16-text">RSVP</span>
+                <svg class="v16-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </a>
     </div>
 
     <script src="script.js"></script>
