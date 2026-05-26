@@ -235,7 +235,7 @@ function initFireflies() {
         firefly.className = 'firefly';
         
         // Randomize size
-        const size = Math.random() * 4 + 2;
+        const size = Math.random() * 2 + 2;
         firefly.style.width = size + 'px';
         firefly.style.height = size + 'px';
         
